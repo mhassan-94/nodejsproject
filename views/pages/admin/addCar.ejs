@@ -1,0 +1,83 @@
+<!-- INCLUDE HEADER -->
+<%- include('../../header')%>
+
+<!-- VERIFICATION MESSAGES -->
+<% if(locals.message){ %>
+  <div class="ui green message">
+    <%- message %>
+  </div>
+<% } %>
+
+<% if(locals.message_err){ %>
+  <div class="ui red message">
+    <%- message_err %>
+  </div>
+<% } %>
+
+<!-- FORM -->
+<form class="formulaire" action="/addCar" method="post" enctype="multipart/form-data">
+  <div class="ui form post">
+    
+  <!-- TITLE -->
+    <div class="header">
+      <h1 class="header">Formulaire de publication</h1>
+    </div>
+
+  <!-- IMAGE -->
+    <div class="div_1">
+      <div class="div_2">
+        <div>
+          <label>Charger une image</label>
+        </div>
+        <div>
+          <input class="ui input" style="width:300px" name="image" type="file">
+        </div>
+      </div>
+    </div>
+
+  <!-- INTITULE -->
+    <div class="div_1 center aligned description">
+      <div class="div_2">
+        <div>
+          <label name="modele">modele <span class="red">*</span></label>
+        </div>
+        <div>
+          <input class="ui input" style="width:300px" name="modele" type="text" >
+        </div>
+      </div>
+    </div>
+
+    <!-- PRIX -->
+    <div class="div_1 center aligned description">
+      <div class="div_2">
+        <div>
+          <label name="intitule">Prix <span class="red">*</span></label>
+        </div>
+        <div>
+          <input class="ui input" style="width:300px" name="prix" type="text" >
+        </div>
+      </div>
+    </div>
+
+  <!-- DESCRIPTION -->
+    <div class="div_1">
+      <div class="div_2">
+        <div>
+          <label>Description <span class="red">*</span></label>
+        </div>
+        <div>
+          <textarea class="ui input" style="width:300px" name="description" type="text" placeholder="Entrez la description de la publication ici"></textarea>
+        </div>
+      </div>
+    </div>
+
+  <!-- SUBMIT BUTTON -->
+    <div class="div_1">
+      <button type="submit" class="ui button">Publier</button>
+    </div>
+  </div>
+</div>
+</form>
+
+<!-- INCLUDE FOOTER -->
+<%- include('../../footer')%>

@@ -1,0 +1,116 @@
+ /* ---------- ADDITIONNAL ---------- */
+
+nav{
+    background-color: black;
+    color:white;
+    padding: 30px 60px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li{
+    list-style: none;
+}
+
+nav li a{
+    color:white;
+    text-decoration: none;
+    font-weight:bold;
+    padding: 5px 8px;
+}
+
+
+/* ---------- GENERAL ---------- */
+
+.red{
+    color:rgb(241, 0, 0);
+}
+
+button{
+    width:140px;
+    height:60px;
+}
+
+h1{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+a:hover{
+    color:white;
+}
+
+.div_1{
+    margin:10px;
+} */
+
+/* ---------- INDEX ---------- */
+ 
+.giant_introduction{
+    justify-content: center;
+}
+
+.introduction{
+    font-size: 1.2em;
+    text-align: center;
+} 
+
+/* ---------- ADMIN ---------- */
+
+    .admin_button{
+    display: flex;
+    justify-content: center;
+    margin:50px 0px;
+}
+
+.admin_button2{
+    padding: 0px 30px;
+}
+
+.head_button{
+    padding: 0px 10px;
+}
+
+.labtitle{
+    justify-content: center;
+} */
+
+/* ---------- ADMIN FORM ---------- */
+/* 
+.post{
+    margin: 30px;
+}
+
+.input{
+    width: 50px;
+} */
+
+/* ---------- HOME ---------- */
+
+.home_div_title{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+.home_title{
+    grid-column-start: 2;
+    background-color: rgb(161, 161, 161);
+    color:white;
+}  
+
+.ui.inverted.vertical.footer.segment {
+    position: sticky !important;
+    margin-top: 25% !important;
+}

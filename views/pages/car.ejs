@@ -1,0 +1,33 @@
+<!-- INCLUDE HEADER -->
+<%- include('../header')%>
+
+<!-- CARD -->
+<div class="ui link cards">
+  <% datas.forEach(function (item) { %>
+    <div class="card">
+      <div class="image">
+         <img src="../../img/<%- item.image %>">
+      </div>
+      <div class="content">
+        <div class="header"><%= item.modele %></div>
+        <div class="description">
+          <%= item.description %>
+        </div>
+      </div>
+      <div class="extra content">
+        <span class="right floated">
+          <a href="/updateCar?id=<%= item.idcar %>"><i class='edit icon'></i></a>
+          <a href="/deleteCar?id=<%= item.idcar %>" onClick="return confirm('Voulez-vous supprimez ?')"><i class="trash icon"></i></a>
+        </span>
+        <span>
+          <%= item.prix %>
+          <i class="euro sign icon"></i>
+        </span>
+      </div>
+      <a href="/reservation?id=<%= item.idcar %>"><button type="submit">reserver</button></a>
+    </div>
+  <% }); %>
+  </div>
+
+<!-- INCLUDE FOOTER -->
+<%- include('../footer')%>

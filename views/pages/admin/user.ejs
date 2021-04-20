@@ -1,0 +1,112 @@
+<!-- INCLUDE HEADER -->
+<%- include('../../header')%>
+
+<% if(locals.amessage){ %>
+  <div class="ui green message">
+    <%- amessage %>
+  </div>
+<% } %>
+
+<% if(locals.amessage_error){ %>
+  <div class="ui red message">
+    <%- amessage_error %>
+  </div>
+<% } %>
+
+<!-- CONTAINER -->
+<div class="container">
+  <div class="ui card centered">
+    <!-- TITLE -->
+    <div>
+      <h1>Formulaire d'inscription</h1>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="image">
+      <img src="">
+    </div>
+
+    <!-- TITLE -->
+    <div class="content">
+      <a class="header">Entrez vos informations</a>
+
+    <!-- FORM -->
+        <form class="formulaire" action="/register" method="post">
+          <div class="ui equal width form post">
+
+    <!-- FIRST NAME -->
+            <div class="div_1">
+              <div class="div_2">
+                <%if (locals.message) { %>
+                  <h4 class="ui green message"><%- message%></h4>
+                <% } %>
+                <div>
+                  <label for="prenom" class="labtitle" name="prenom">Prenom <span class="red">*</span></label>
+                </div>
+                <div>
+                  <input class="ui input" id="prenom" name="prenom" type="text">
+                </div>
+              </div>
+            </div>
+
+    <!-- LAST NAME -->
+            <div class="div_1">
+              <div class="div_2">
+                <div>
+                  <label for="nom" class="labtitle" name="nom">Nom <span class="red">*</span></label>
+                </div>
+                <div>
+                  <input class="ui input" id="nom" name="nom" type="text" wtx-context="25C92365-976F-4E6E-834F-1B6F8212E261">
+                </div>
+              </div>
+            </div>
+
+    <!-- EMAIL -->
+            <div class="div_1">
+              <div class="div_2">
+                <div>
+                  <label for="mail" class="labtitle" name="mail">Adresse mail <span class="red">*</span></label>
+                </div>
+                <div>
+                  <input class="ui input" id="mail" name="mail" type="email" wtx-context="E54A5973-661C-41F5-ABDD-EC0D4ED80A53">
+                </div>
+              </div>
+            </div>
+
+    <!-- ENTER PASSWORD -->
+            <div class="div_1">
+              <div class="div_2">
+                <div>
+                  <label for="password1" class="labtitle" name="password1">Mot de passe <span class="red">*</span></label>
+                </div>
+                <div>
+                  <input class="ui input" id="password1" name="password1" type="password" wtx-context="E54A5973-661C-41F5-ABDD-EC0D4ED80A53">
+                </div>
+              </div>
+            </div>
+
+    <!-- PASSWORD VERIFICATION -->
+            <div class="div_1">
+              <div class="div_2">
+                <div>
+                  <label for="password2" class="labtitle" name="password2">Vérification Mot de passe <span class="red">*</span></label>
+                </div>
+                <div>
+                  <input class="ui input" id="password2" name="password2" type="password" wtx-context="E54A5973-661C-41F5-ABDD-EC0D4ED80A53">
+                </div>
+              </div>
+            </div>
+
+    <!-- SUBMIT BUTTON -->
+            <div class="div_1">
+              <button type="submit" class="ui button">S'inscrire</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+</div>
+
+<!-- INCLUDE FOOTER -->
+<%- include('../../footer')%>
